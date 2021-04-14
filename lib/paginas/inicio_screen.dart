@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miniSise/menu.dart';
+import 'package:flutter/cupertino.dart';
 
 
 class InicioScreen extends StatefulWidget {
@@ -17,13 +18,50 @@ class _InicioScreenState extends State<InicioScreen> {
       appBar: AppBar(
         title: Text("Inicio"),
       ),
-      body: Container(
-        child: Text("Estas en el inicio"
-)
-
-        ,
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(10.0),
+       child: Center(
+         child: Column(children: <Widget>[
+            _card1(),
+            
+            
+            
+         ],),
+         
+         
+       ),
+    
         
       ),
+
+      
     );
   }
 }
+
+Widget _card1(){
+    return Center(
+    child: Card(
+      
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          const ListTile(
+            
+            title: Text('Bienvenido a tu SiseApp',
+            textAlign: TextAlign.center,
+            
+            style: TextStyle(
+             fontSize: 20,
+             
+            ),)
+            
+          ),
+          
+        ],
+      ),
+    ),
+  );
+}
+
